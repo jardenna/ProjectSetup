@@ -1,5 +1,3 @@
-// const items = ['One', 'Two'];
-
 function App() {
   return (
     <main>
