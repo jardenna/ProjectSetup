@@ -1,16 +1,5 @@
 @use './globals' as *;
 
-button:disabled {
-  pointer-events: none;
-  background-color: $color-secondary;
-  color: $color-gray-60;
-
-  &.btn-ghost {
-    background-color: transparent;
-    color: $color-gray-60;
-  }
-}
-
 a[class^='btn-'],
 .btn {
   display: flex;
@@ -44,65 +33,10 @@ a[class^='btn-'],
   color: $color-secondary;
 
   &:hover {
-    background-color: $color-gray-70;
+    background-color: $color-primary;
   }
 
   &:focus-visible {
-    @include outline($color-primary);
-  }
-}
-
-// Secondary button
-.btn-secondary {
-  background-color: $color-white;
-  color: $color-primary;
-  border: $border-dark;
-
-  &:focus-visible,
-  &:hover {
-    color: $color-gray-60;
-    border-color: $color-primary;
-  }
-}
-
-// Danger button
-.btn-danger {
-  background-color: $color-danger;
-  color: $color-white;
-
-  &:hover {
-    background-color: $color-red-30;
-  }
-
-  &:focus-visible {
-    @include outline($color-danger);
-  }
-}
-
-// Ghost button
-.btn-ghost {
-  background-color: transparent;
-  color: $color-dust-red-30;
-  width: fit-content;
-  min-height: auto;
-  padding: 0;
-  font-size: $font-small;
-  border-radius: 0;
-  gap: 4px;
-
-  &:hover {
-    color: $color-link-hover;
-  }
-
-  &:focus-visible {
-    color: $color-blue-30;
-
     @include outline;
-
-    svg {
-      stroke: $color-blue-30;
-
-      @include transition;
-    }
   }
 }

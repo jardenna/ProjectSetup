@@ -51,7 +51,7 @@ $animation-timing-function: ease-in-out;
   }
 }
 
-@mixin outline($color: $color-blue-30, $size: 2px, $offSet: 2px) {
+@mixin outline($color: $color-primary, $size: 2px, $offSet: 2px) {
   outline: $size solid $color;
   outline-offset: $offSet;
 }
