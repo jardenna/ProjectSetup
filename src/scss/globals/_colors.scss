@@ -1,0 +1,61 @@
+$color-white: #fff;
+$color-black: #000;
+$color-yellow: #fec901;
+$color-yellow-80: #8a5a00;
+
+// Blue colors
+$color-blue-20: #dce4e7;
+$color-blue-25: #94afba;
+$color-blue-30: #2f6d8f;
+$color-blue-70: #5b3a8c;
+
+// Red dust colors
+$color-dust-red-10: #faf0ef;
+$color-dust-red-20: #a0738f;
+$color-dust-red-30: #793e5f;
+$color-dust-red-40: #583247;
+
+// Red  colors
+$color-red-10: #db1139;
+$color-red-15: #b82845;
+$color-red-20: #88001b;
+$color-red-30: #b21534;
+
+// Gray colors
+$color-gray-20: #d6dcda;
+$color-gray-30: #e5e5e5;
+$color-gray-40: #d9d6d6;
+$color-gray-60: #99a4a9;
+$color-gray-70: #66606d;
+$color-gray-80: #1e211d;
+
+// Light gray colors
+$color-light-gray: #f1f1f1;
+$color-light-gray-10: #fdfefe;
+$color-light-gray-20: #f9f9f9;
+$color-light-gray-30: #f4f4f5;
+$color-light-gray-40: #e9e9ea;
+
+/* colors */
+$color-border: $color-gray-30;
+$color-border-dark: $color-gray-60;
+$color-input-background: $color-light-gray-30;
+$color-link-hover: $color-blue-30;
+$color-primary: $color-gray-80;
+$color-secondary: $color-light-gray-30;
+$color-background: $color-light-gray-20;
+$color-background-secondary: $color-blue-30;
+$color-discount: $color-red-15;
+$color-overlay: rgb($color-black, 50%);
+
+// Message popup colors
+$color-danger: $color-red-20;
+$color-success: $color-blue-30;
+$color-info: #4e8673;
+$color-warning: $color-yellow;
+
+// Badge colors
+$color-badge-scheduled: $color-gray-70;
+$color-badge-inactive: $color-dust-red-30;
+$color-badge-default: $color-blue-30;
+$color-badge-discount: $color-dust-red-30;
