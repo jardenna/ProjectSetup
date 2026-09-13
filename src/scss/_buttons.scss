@@ -30,7 +30,7 @@ a[class^='btn-'],
 // Primary button
 .btn-primary {
   background-color: $color-primary;
-  color: $color-secondary;
+  color: $color-text-button;
 
   &:hover {
     background-color: $color-primary;

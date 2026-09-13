@@ -1,23 +1,18 @@
 $color-white: #fff;
 $color-black: #000;
 
-// Gray colors
-$color-gray-20: #d6dcda;
-$color-gray-30: #e5e5e5;
-$color-gray-40: #d9d6d6;
-$color-gray-60: #99a4a9;
-$color-gray-70: #66606d;
-$color-gray-80: #1e211d;
+// Base colors
+$color-gray-base: #1e211d;
+$color-blue-base: #2f6d8f;
 
-// Light gray colors
-$color-light-gray: #f1f1f1;
-$color-light-gray-10: #fdfefe;
-$color-light-gray-20: #f9f9f9;
-$color-light-gray-30: #f4f4f5;
-$color-light-gray-40: #e9e9ea;
+// Primitive colors
+$color-gray-base-200: oklch(92% 0 0deg);
+$color-gray-base-500: oklch(68% 0.025 220deg);
+$color-gray-base-50: oklch(98% 0.012 130deg);
 
-/* colors */
-$color-border: #e5e5e5;
-$color-border-dark: #99a4a9;
-$color-primary: #1e211d;
-$color-secondary: #f4f4f5;
+// Semantic colors
+$color-text-button: $color-gray-base-50;
+$color-border: $color-gray-base-200;
+$color-border-dark: $color-gray-base-500;
+$color-primary: $color-gray-base;
+$color-secondary: $color-blue-base;
