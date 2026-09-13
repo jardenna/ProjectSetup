@@ -2,6 +2,7 @@ import axe from '@axe-core/react';
 import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
+import './scss/style.scss';
 
 const rootElement = document.getElementById('root');
 
