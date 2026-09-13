@@ -6,7 +6,6 @@ function App() {
       <section>
         <h1>Test</h1>
         hello
-        <a>Test</a>
       </section>
     </main>
   );
