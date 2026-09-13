@@ -5,16 +5,18 @@ import App from './App';
 
 const rootElement = document.getElementById('root');
 
-if (rootElement) {
-  const root = createRoot(rootElement);
+if (!rootElement) {
+  throw new Error('Root element not found');
+}
 
-  root.render(
-    <StrictMode>
-      <App />
-    </StrictMode>,
-  );
+const root = createRoot(rootElement);
 
-  if (import.meta.env.DEV) {
-    void axe(React, root, 1000);
-  }
+root.render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+);
+
+if (import.meta.env.DEV) {
+  void axe(React, root, 1000);
 }
