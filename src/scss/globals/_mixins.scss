@@ -1,0 +1,89 @@
+/* stylelint-disable block-no-redundant-nested-style-rules */
+@use './colors' as *;
+@use './variables' as *;
+@use './functions' as *;
+@use 'sass:math';
+
+$animation-duration: 0.5s;
+$animation-timing-function: ease-in-out;
+
+@mixin max-size($width) {
+  @media (width <= $width) {
+    @content;
+  }
+}
+
+@mixin max-height($height) {
+  @media (height <= $height) {
+    @content;
+  }
+}
+
+@mixin between-size($maxWidth, $minWidth) {
+  @media ($maxWidth <= width <= $minWidth) {
+    @content;
+  }
+}
+
+@mixin min-size($width) {
+  @media (width >= $width) {
+    @content;
+  }
+}
+
+@mixin transition($what: all, $time: 0.3s, $how: $animation-timing-function) {
+  @media (prefers-reduced-motion: no-preference) {
+    & {
+      transition: $what $time $how;
+    }
+  }
+}
+
+@mixin animation(
+  $name,
+  $duration: $animation-duration,
+  $timing: $animation-timing-function
+) {
+  @media (prefers-reduced-motion: no-preference) {
+    & {
+      animation: $name $duration $timing forwards;
+    }
+  }
+}
+
+@mixin outline($color: $color-primary, $size: 2px, $offSet: 2px) {
+  outline: $size solid $color;
+  outline-offset: $offSet;
+}
+
+@mixin grid-template-column($size: 300px) {
+  @if math.is-unitless($size) or math.unit($size) == 'px' {
+    $size: rem($size);
+  }
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, $size), 1fr));
+
+  @include max-size($medium) {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(min(100%, rem(224px)), 1fr)
+    );
+  }
+}
+
+@mixin grid-fixed-columns($columns: 2, $gap: 12px) {
+  display: grid;
+  gap: $gap;
+  grid-template-columns: repeat($columns, 1fr);
+}
+
+@mixin set-grid-size($size) {
+  @if math.is-unitless($size) or math.unit($size) == 'px' {
+    $size: rem($size);
+  }
+
+  display: grid;
+
+  --grid-size: #{$size};
+}

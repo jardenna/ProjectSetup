@@ -1,0 +1,18 @@
+$color-white: #fff;
+$color-black: #000;
+
+// Base colors
+$color-gray-base: #1e211d;
+$color-blue-base: #2f6d8f;
+
+// Primitive colors
+$color-gray-base-200: oklch(92% 0 0deg);
+$color-gray-base-500: oklch(68% 0.025 220deg);
+$color-gray-base-50: oklch(98% 0.012 130deg);
+
+// Semantic colors
+$color-text-button: $color-gray-base-50;
+$color-border: $color-gray-base-200;
+$color-border-dark: $color-gray-base-500;
+$color-primary: $color-gray-base;
+$color-secondary: $color-blue-base;

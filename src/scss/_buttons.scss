@@ -1,0 +1,42 @@
+@use './globals' as *;
+
+a[class^='btn-'],
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: inherit;
+  font-size: $font-medium;
+  font-weight: normal;
+  padding: 16px;
+  border-radius: $border-radius;
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  min-height: rem(60px);
+  letter-spacing: rem(0.5px);
+  outline: transparent;
+
+  @include transition;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: -9px;
+  }
+}
+
+// Primary button
+.btn-primary {
+  background-color: $color-primary;
+  color: $color-text-button;
+
+  &:hover {
+    background-color: $color-primary;
+  }
+
+  &:focus-visible {
+    @include outline;
+  }
+}

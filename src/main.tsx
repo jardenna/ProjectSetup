@@ -2,19 +2,22 @@ import axe from '@axe-core/react';
 import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
+import './scss/style.scss';
 
 const rootElement = document.getElementById('root');
 
-if (rootElement) {
-  const root = createRoot(rootElement);
+if (!rootElement) {
+  throw new Error('Root element not found');
+}
 
-  root.render(
-    <StrictMode>
-      <App />
-    </StrictMode>,
-  );
+const root = createRoot(rootElement);
 
-  if (import.meta.env.DEV) {
-    void axe(React, root, 1000);
-  }
+root.render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+);
+
+if (import.meta.env.DEV) {
+  void axe(React, root, 1000);
 }

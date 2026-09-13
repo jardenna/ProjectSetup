@@ -1,0 +1,66 @@
+@use './globals' as *;
+
+* {
+  box-sizing: border-box;
+
+  $color-background: #f9f9f9;
+  $color-foreground: $color-border-dark;
+
+  @include min-size($mini) {
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: $color-background;
+      border-radius: 2px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: $color-foreground;
+      border-radius: $border-radius;
+    }
+
+    @supports not selector(::-webkit-scrollbar) {
+      scrollbar-width: thin;
+      scrollbar-color: $color-foreground $color-background;
+    }
+  }
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  color-scheme: light dark;
+
+  @include min-size($medium) {
+    scrollbar-gutter: stable;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: $font-primary;
+  font-size: $font-medium;
+  color: $color-primary;
+
+  // Interpolation calculates intermediate values to enable smooth transitions between states
+  interpolate-size: allow-keywords;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-primary-bold;
+  margin: 0;
+}
+
+h1 {
+  font-size: rem(32px);
+}
