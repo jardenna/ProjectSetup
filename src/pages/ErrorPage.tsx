@@ -1,4 +1,5 @@
 import { isRouteErrorResponse, useNavigate, useRouteError } from 'react-router';
+import ErrorContent from '../components/errors/ErrorContent';
 
 const ErrorPage = () => {
   const error = useRouteError() as Error;
@@ -14,12 +15,11 @@ const ErrorPage = () => {
 
   return (
     <main className="error-page">
-      <header>
-        <h2 className="error-info">{error.data}</h2>
-      </header>
-      <button type="button" onClick={handleGoback}>
-        Go back
-      </button>
+      <ErrorContent
+        onClick={handleGoback}
+        errorText={error.data as string}
+        btnLabel="Go back"
+      />
     </main>
   );
 };
