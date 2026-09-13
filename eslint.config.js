@@ -2,6 +2,7 @@ import eslintReact from '@eslint-react/eslint-plugin';
 import js from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import jsxA11y from 'eslint-plugin-jsx-a11y-x';
+import perfectionist from 'eslint-plugin-perfectionist';
 import prettier from 'eslint-plugin-prettier/recommended';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
@@ -24,6 +25,7 @@ export default defineConfig([
     plugins: {
       '@stylistic': stylistic,
       'jsx-a11y-x': jsxA11y,
+      perfectionist,
     },
     rules: {
       'prettier/prettier': [
@@ -31,7 +33,19 @@ export default defineConfig([
         { endOfLine: 'auto' },
         { usePrettierrc: true },
       ],
-
+      'perfectionist/sort-interfaces': [
+        'error',
+        {
+          groups: ['required-property', 'optional-property'],
+        },
+      ],
+      'perfectionist/sort-object-types': [
+        'error',
+        {
+          groups: ['required-property', 'optional-property'],
+        },
+      ],
+      'perfectionist/sort-enums': ['error'],
       '@typescript-eslint/no-unused-vars': 'error',
       '@typescript-eslint/no-duplicate-enum-values': 'warn',
       '@typescript-eslint/no-non-null-assertion': 'error',
