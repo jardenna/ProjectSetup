@@ -1,0 +1,40 @@
+@mixin mq-size($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin color-scheme($bg, $text) {
+  color: $text;
+  background-color: $bg;
+}
+
+@mixin rotate($deg: 45deg) {
+  transform: rotate($deg);
+}
+
+@mixin grid($colAmount: 2, $gap: 20px) {
+  display: grid;
+  grid-template-columns: repeat($colAmount, 1fr);
+  gap: $gap;
+}
+
+@mixin transition($what: all, $time: 0.3s, $how: ease-in-out) {
+  transition: $what $time $how;
+
+  @media (prefers-reduced-motion) {
+    transition: none;
+  }
+}
+
+@mixin outline($color: $color-hilight) {
+  outline: 2px solid $color;
+}
+
+@mixin animation($name, $duration: $animation-duration, $timing: ease-in-out) {
+  animation: $name $duration $timing forwards;
+
+  @media (prefers-reduced-motion) {
+    animation-name: none;
+  }
+}
