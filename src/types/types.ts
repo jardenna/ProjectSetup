@@ -1,7 +1,7 @@
 import type { RefObject } from 'react';
 
 export type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'danger';
-//
+
 export type InputType =
   | 'checkbox'
   | 'color'
