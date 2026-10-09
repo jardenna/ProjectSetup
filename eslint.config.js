@@ -55,6 +55,7 @@ export default defineConfig([
       '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
       'arrow-body-style': 'warn',
       curly: ['error', 'all'],
+      eqeqeq: ['error', 'always'],
       'object-shorthand': ['error', 'always'],
       'spaced-comment': [
         'error',
