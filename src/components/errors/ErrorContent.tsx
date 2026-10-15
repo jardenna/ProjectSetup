@@ -16,7 +16,7 @@ const ErrorContent = ({ onClick, errorText, btnLabel }: ErrorContentProps) => {
         className="emoji"
         src={`${src}.png`}
         srcSet={`${src}.avif`}
-        alt="A really guilty emoji"
+        alt="A really guilty emoji!"
       />
       <h1>Error</h1>
       <p className="error-info">{errorText}</p>
