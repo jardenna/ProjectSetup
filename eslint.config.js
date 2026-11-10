@@ -52,6 +52,7 @@ export default defineConfig([
       '@typescript-eslint/no-non-null-assertion': 'error',
       '@typescript-eslint/no-confusing-void-expression': 'error',
       '@typescript-eslint/no-empty-object-type': 'warn',
+      '@typescript-eslint/no-redeclare': 'error',
       '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
       'arrow-body-style': 'warn',
       curly: ['error', 'all'],
