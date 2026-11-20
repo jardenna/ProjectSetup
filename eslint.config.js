@@ -46,6 +46,7 @@ export default defineConfig([
         },
       ],
       'perfectionist/sort-enums': ['error'],
+      '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
       '@typescript-eslint/no-unused-vars': 'error',
       '@typescript-eslint/no-unnecessary-template-expression': 'error',
       '@typescript-eslint/no-duplicate-enum-values': 'warn',
